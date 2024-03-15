@@ -1,13 +1,13 @@
 # Databricks notebook source
-# Import the necessary libraries
+# Import the required libraries
 from pyspark.sql import SparkSession
 
-# Create a Spark session
+# Create a SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-# List all the schemas
+# Get the list of schemas
 schemas = spark.catalog.listDatabases()
 
-# Print the schema names
+# Print the list of schemas
 for schema in schemas:
     print(schema.name)
